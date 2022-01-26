@@ -7,6 +7,15 @@ public class mentoria extends conteudo{
     private LocalDate data;
 
     @Override
+    public String toString() {
+        return "mentoria{" +
+                "titulo='" + getTitulo() + '\'' +
+                ", descricao='" + getDescricao() + '\'' +
+                 "data=" + data +
+                '}';
+    }
+
+    @Override
     public double CalculoXP() {
         return XP_PADRAO + 20d;
     }
