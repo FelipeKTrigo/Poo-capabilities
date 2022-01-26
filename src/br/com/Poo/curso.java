@@ -1,24 +1,13 @@
 package br.com.Poo;
 
-public class curso {
-    private String titulo;
-    private String descricao;
+public class curso extends conteudo{
+
+
     private int cargahoraria;
 
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    @Override
+    public double CalculoXP() {
+        return XP_PADRAO * cargahoraria;
     }
 
     public int getCargahoraria() {
@@ -32,9 +21,10 @@ public class curso {
     @Override
     public String toString() {
         return "curso{" +
-                "titulo='" + titulo + '\'' +
-                ", descricao='" + descricao + '\'' +
+                "titulo='" + getTitulo() + '\'' +
+                ", descricao='" + getDescricao() + '\'' +
                 ", cargahoraria=" + cargahoraria +
                 '}';
     }
+
 }
